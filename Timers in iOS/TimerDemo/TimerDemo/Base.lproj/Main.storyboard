@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hj8-gb-tsY">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item 2-->
+        <scene sceneID="m81-Zq-NBd">
+            <objects>
+                <viewController id="gGo-5R-48k" customClass="BackgroundTimerViewController" customModule="TimerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XhW-T4-GFD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Axw-se-XEw">
+                                <rect key="frame" x="151.5" y="413" width="111" height="70.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41w-Kd-SPr">
+                                        <rect key="frame" x="0.0" y="0.0" width="111" height="30"/>
+                                        <state key="normal" title="Start operations"/>
+                                        <connections>
+                                            <action selector="didTouchStartOperationsButton:" destination="gGo-5R-48k" eventType="touchUpInside" id="bA5-oV-Kr4"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01f-Mv-afB">
+                                        <rect key="frame" x="0.0" y="50" width="111" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Axw-se-XEw" firstAttribute="centerX" secondItem="XhW-T4-GFD" secondAttribute="centerX" id="9mZ-Ej-a5a"/>
+                            <constraint firstItem="Axw-se-XEw" firstAttribute="centerY" secondItem="XhW-T4-GFD" secondAttribute="centerY" id="TLy-7t-CtW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Evv-9Y-gsP"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="7iI-xG-vZZ"/>
+                    <connections>
+                        <outlet property="infoLabel" destination="01f-Mv-afB" id="Jx7-q8-5sQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vzq-Hk-Plq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="234" y="827"/>
+        </scene>
+        <!--Timer-->
+        <scene sceneID="evw-1O-mjC">
+            <objects>
+                <viewController id="M72-KM-UqL" customClass="TimerViewController" customModule="TimerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XCg-z4-wRc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ohf-Tq-RkN">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dmj-zQ-iX5">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3a-Rd-fe2">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="33"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Start Oneoff Timer"/>
+                                                <connections>
+                                                    <action selector="didTouchStartOneoffTimerButton:" destination="M72-KM-UqL" eventType="touchUpInside" id="FsQ-tp-JE2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LdR-rM-XXz">
+                                                <rect key="frame" x="0.0" y="83.5" width="414" height="33"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Start Repeat Timer"/>
+                                                <connections>
+                                                    <action selector="didTouchStartRepeatTimerButton:" destination="M72-KM-UqL" eventType="touchUpInside" id="VTt-ff-ScC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKW-gu-DFm">
+                                                <rect key="frame" x="0.0" y="167" width="414" height="33"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Stop Repeat Timer"/>
+                                                <connections>
+                                                    <action selector="didTouchStopRepeatTimerButton:" destination="M72-KM-UqL" eventType="touchUpInside" id="CZI-T9-QYC"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qge-vM-qTh">
+                                        <rect key="frame" x="0.0" y="200" width="414" height="569"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MyCell" textLabel="sbD-IP-txB" detailTextLabel="G5Z-PF-LTJ" style="IBUITableViewCellStyleSubtitle" id="PKp-Lw-AP0">
+                                                <rect key="frame" x="0.0" y="28" width="414" height="70"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PKp-Lw-AP0" id="GCe-15-61t">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="69.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sbD-IP-txB">
+                                                            <rect key="frame" x="20" y="15" width="33.5" height="20.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="G5Z-PF-LTJ">
+                                                            <rect key="frame" x="20" y="38.5" width="44" height="14.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <sections/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="M72-KM-UqL" id="iFN-gb-Oob"/>
+                                            <outlet property="delegate" destination="M72-KM-UqL" id="GEh-Db-B30"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sva-Vz-yw9" firstAttribute="trailing" secondItem="Ohf-Tq-RkN" secondAttribute="trailing" id="2kx-Mo-6JD"/>
+                            <constraint firstItem="Ohf-Tq-RkN" firstAttribute="top" secondItem="sva-Vz-yw9" secondAttribute="top" id="HwH-4X-RYh"/>
+                            <constraint firstItem="Ohf-Tq-RkN" firstAttribute="leading" secondItem="sva-Vz-yw9" secondAttribute="leading" id="bno-Q5-NZu"/>
+                            <constraint firstItem="sva-Vz-yw9" firstAttribute="bottom" secondItem="Ohf-Tq-RkN" secondAttribute="bottom" id="wgq-Ty-aCK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sva-Vz-yw9"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Timer" id="XCj-Hq-fZH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eeO-ao-eYl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="234" y="179"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="7SS-u1-r4X">
+            <objects>
+                <tabBarController id="hj8-gb-tsY" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y8i-dr-mFJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="M72-KM-UqL" kind="relationship" relationship="viewControllers" id="rXE-3B-ilH"/>
+                        <segue destination="gGo-5R-48k" kind="relationship" relationship="viewControllers" id="yaj-XK-CzS"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="um1-ry-b2k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-684" y="503"/>
+        </scene>
+    </scenes>
+</document>
